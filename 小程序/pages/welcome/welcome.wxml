@@ -1,0 +1,7 @@
+<view class="demo">
+    <image class="demo-img" src="/image/avatar/0.jpg"></image>
+    <text class="demo-name">hello,七月</text>
+    <view class="moto-container" bindtap="onTap">
+        <text class="demo-moto">开启小程序之旅</text>
+    </view>
+</view>

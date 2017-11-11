@@ -1,0 +1,21 @@
+<import src="movie-list/movie-list-template.wxml" />
+<import src="movie-grid/movie-grid-template.wxml" />
+<view class="search">
+  <icon type="search" size="13" class="search-img" color="#405f80"></icon>
+  <input type="text" placeholder="极限特工，你的名字..." placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onBindConfirm" />
+  <image class="xx-img" src="/image/icon/xx.png" catchtap="onCloseTap"></image>
+</view>
+<view class="container" wx:if="{{containerShow}}">
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...inTheater}}" />
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...comingSoon}}" />
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...top250}}" />
+  </view>
+</view>
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+  <template is="movieGridTemplate" data="{{...searchData}}" />
+</view>
